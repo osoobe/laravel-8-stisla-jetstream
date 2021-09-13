@@ -12,8 +12,19 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css')
-    .postCss('resources/css/tailwind.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-    ]);
+    .extract([
+        'jquery', 'jquery-ui', 'bootstrap', 'animate.css', 'bootstrap-datepicker',
+        'bootstrap-table', 'bootstrap-daterangepicker'
+    ])
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery', 'jquery'],
+        moment: ['window.moment', 'moment', 'dropzone'],
+    })
+    .sass('resources/scss/vendor.scss', 'public/css/')
+    .sass('resources/scss/app.scss', 'public/css/')
+    .webpackConfig(require('./webpack.config'));
+
+mix.copy('node_modules/bootstrap-table/', 'public/vendor/bootstrap-table');
+if (mix.inProduction()) {
+    mix.version();
+}

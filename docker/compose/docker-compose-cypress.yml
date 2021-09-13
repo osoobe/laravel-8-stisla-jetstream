@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  cypress:
+     # the Docker image to use from https://github.com/cypress-io/cypress-docker-images
+    image: "cypress/included:3.2.0"
+    environment:
+      # pass base url to test pointing at the web application
+      - CYPRESS_baseUrl=http://0.0.0.0:19288
+      # - CYPRESS_port=19288
+    # network_mode: host
+    ports:
+      - '19288:19288'
+    # pass custom command to start Cypress otherwise it will use the entrypoint
+    # specified in the Cypress Docker image.
+    # also pass "--project <folder>" so that when Cypress opens
+    # it can find file "cypress.json" and show integration specs
+    # https://on.cypress.io/command-line#cypress-open
+    entrypoint: cypress open
+    environment:
+      # get the IP address of the host machine and allow X11 to accept
+      # incoming connections from that IP address
+      #   IP=$(ipconfig getifaddr en0)
+      #   /usr/X11/bin/xhost + $IP
+      # then pass the environment variable DISPLAY to show Cypress GUI on the host system
+      #   DISPLAY=$IP:0
+      - DISPLAY
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+      # for Cypress to communicate with the X11 server pass this socket file
+      # in addition to any other mapped volumes
+      - /tmp/.X11-unix:/tmp/.X11-unix

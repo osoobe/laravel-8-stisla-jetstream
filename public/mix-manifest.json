@@ -1,5 +1,16 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/manifest.js": "/js/manifest.js",
     "/css/app.css": "/css/app.css",
-    "/css/tailwind.css": "/css/tailwind.css"
+    "/css/vendor.css": "/css/vendor.css",
+    "/js/vendor.js": "/js/vendor.js",
+    "/vendor/bootstrap-table/CHANGELOG.md": "/vendor/bootstrap-table/CHANGELOG.md",
+    "/vendor/bootstrap-table/LICENSE": "/vendor/bootstrap-table/LICENSE",
+    "/vendor/bootstrap-table/README.md": "/vendor/bootstrap-table/README.md",
+    "/vendor/bootstrap-table/bootstrap-table.jquery.json": "/vendor/bootstrap-table/bootstrap-table.jquery.json",
+    "/vendor/bootstrap-table/bower.json": "/vendor/bootstrap-table/bower.json",
+    "/vendor/bootstrap-table/composer.json": "/vendor/bootstrap-table/composer.json",
+    "/vendor/bootstrap-table/index.d.ts": "/vendor/bootstrap-table/index.d.ts",
+    "/vendor/bootstrap-table/package.json": "/vendor/bootstrap-table/package.json",
+    "/vendor/bootstrap-table/rollup.config.js": "/vendor/bootstrap-table/rollup.config.js"
 }

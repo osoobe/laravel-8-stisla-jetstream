@@ -1,0 +1,26 @@
+version: '3.7'
+
+x-seekuur: &seekuur-app
+  image: registry.gitlab.com/osoobe/saas/seekuur
+  restart: always
+  networks:
+    - jobnet
+  env_file:
+    - .env_file
+  volumes:
+    - './gitsource/storage/:/var/www/storage/'
+    - './data/images/:/var/www/public/images/'
+    - './data/cvs/:/var/www/public/cvs/'
+
+services:
+  web_blue:
+    <<: *seekuur-app
+    container_name: seekuur_blue
+    ports:
+      - '18381:80'
+      - '18343:443'
+    # environment:
+    #   - APP_DEBUG=true
+
+networks:
+  jobnet:

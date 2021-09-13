@@ -1,0 +1,24 @@
+version: '3.7'
+
+x-seekuur: &seekuur-app
+  image: registry.gitlab.com/osoobe/saas/seekuur
+
+services:
+  web_blue:
+    <<: *seekuur-app
+    ports:
+      - '8080:80'
+      - '8081:81'
+    restart: unless-stopped
+    env_file: .env_file
+    environment:
+      - APP_DEBUG=true
+      - APP_DB_PORT=3306
+      - APP_DB_HOST='104.248.229.217'
+      - APP_DB_NAME=$MYSQL_DATABASE
+      - APP_DB_USERNAME=ojobse
+      - APP_DB_PASSWORD='6ry0d1*Z'
+      - APP_DB_NAME=ijobpanel
+    
+networks:
+  jobnet:

@@ -1,8 +1,14 @@
+# Laravel Folders
 /node_modules
 /public/hot
 /public/storage
 /storage/*.key
 /vendor
+
+# Project Files
+/src
+
+# Laravel Files
 .env
 .env.backup
 .phpunit.result.cache
@@ -10,3 +16,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# Docker Files
+.env_file
+docker-compose.override.yml
+
+

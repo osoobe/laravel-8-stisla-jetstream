@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import "./argon.scss";
+@import "~bootstrap-table/dist/bootstrap-table.min.css";
+@import "~select2-theme-bootstrap4/dist/select2-bootstrap.min.css";
+@import "./override.scss";
+@import "./pages.scss";
+
+// Font Style
+
+body {
+  font-family: "Varela Round", "Open Sans", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: 600 !important;
+  line-height: $headings-line-height;
+  color: $headings-color !important;
+}
+
+.heading-color-light,
+h3,
+h4,
+h5,
+h6,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $heading-color-light !important;
+}
+
+.text-black {
+    color: $logo-black-color !important;
+}
+
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: inherit !important;
+}
+
+.text-sm {
+  font-size: 1rem !important;
+  line-height: inherit !important;
+}
+
+.text-md {
+  font-size: 2rem !important;
+  line-height: inherit !important;
+}
+
+.text-lg {
+  font-size: 3rem !important;
+  line-height: inherit !important;
+}
+
+.text-xl {
+  font-size: 3.5rem !important;
+  line-height: inherit !important;
+}
+
+.navbar-horizontal.navbar-transparent.text-black {
+  .navbar-nav {
+    .nav-link {
+      color: black !important;
+      &:hover {
+        color: #f7941d !important;
+      }
+      &:focus {
+        color: #f7941d !important;
+      }
+    }
+  }
+}
+
+.navbar-dark.bg-dark {
+  a.nav-link {
+    color: $logo-white-color;
+    i {
+      color: $logo-yellow-color;
+    }
+  }
+}
+
+.top-nav-text-white {
+  .navbar-horizontal.navbar-transparent {
+    .navbar-nav {
+      .nav-link {
+        color: white !important;
+        &:hover {
+          color: black !important;
+        }
+        &:focus {
+          color: black !important;
+        }
+      }
+    }
+  }
+}
+
+.bg-light-teal {
+  background: $light-teal;
+}
+
+.card.card-frame.card-img-bk {
+  border-radius: 8px;
+  position: relative;
+
+  .card-body {
+    position: relative;
+    border-radius: 8px;
+    height: 512px;
+    border-radius: 8px;
+    background-size: cover !important;
+    box-shadow: 0 2px 10px #0000009e;
+    background-position: center !important;
+    margin-top: -50px;
+  }
+}
+
+
+.bg-theme-gradient {
+    background: linear-gradient(87deg, #068e4f 0, #04e07b 100%) !important;
+
+    .breadcrumbs * {
+        @extend .text-white;
+    }
+  }
+
+//   nav#sidenav-main:hover a > * {
+//     display: inline-block !important;
+// }
+
+// nav#sidenav-main:hover img {
+//     display: inline-block !important;
+//     visibility: visible !important;
+// }
+

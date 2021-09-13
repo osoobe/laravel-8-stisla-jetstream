@@ -1,0 +1,12 @@
+.form-control.select2-form-control {
+  padding: 0;
+
+  span.select2.select2-container.select2-container--bootstrap.select2-container--below {
+    height: inherit;
+    display: block;
+  }
+
+  span.select2-selection.select2-selection--single {
+    height: inherit;
+  }
+}

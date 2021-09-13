@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  static:
+    image: node:8
+    volumes:
+      - './:/var/www'
+    entrypoint: sleep
+    command: 3h

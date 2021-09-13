@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./bsTable');
 
 function dataTableController (id) {
     return {
@@ -47,3 +48,7 @@ window.__controller = {
     dataTableController,
     dataTableMainController
 }
+
+window.addEventListener('load', (event) => {
+    $('.select2').select2();
+});
