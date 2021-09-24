@@ -22,6 +22,10 @@ mix.js('resources/js/app.js', 'public/js')
     })
     .sass('resources/scss/vendor.scss', 'public/css/')
     .sass('resources/scss/app.scss', 'public/css/')
+    .postCss('resources/css/app.css', 'public/css/tailwind.css', [
+        require('postcss-import'),
+        require('tailwindcss'),
+    ]);
     .webpackConfig(require('./webpack.config'));
 
 mix.copy('node_modules/bootstrap-table/', 'public/vendor/bootstrap-table');

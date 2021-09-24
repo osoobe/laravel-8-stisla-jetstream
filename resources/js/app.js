@@ -1,6 +1,9 @@
 require('./bootstrap');
 require('./bsTable');
 
+import Alpine from 'alpinejs';
+window.Alpine = Alpine;
+
 function dataTableController (id) {
     return {
         id,
@@ -52,3 +55,5 @@ window.__controller = {
 window.addEventListener('load', (event) => {
     $('.select2').select2();
 });
+
+Alpine.start();
